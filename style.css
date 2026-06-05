@@ -1,0 +1,305 @@
+/* --- RESET STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* EFEK GRADASI: Diagonal modern dari gelap ke ungu malam */
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #2e1065 100%);
+    background-attachment: fixed; /* Menjaga gradasi tidak ikut bergeser saat di-scroll */
+    color: #cbd5e1;
+    display: block;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* --- CARD CONTAINER --- */
+.card {
+    max-width: 650px;
+    background: rgba(30, 41, 59, 0.7); /* Efek semi-transparan (Glassmorphism) */
+    backdrop-filter: blur(10px); /* Membiaskan gradasi background di belakang card */
+    margin: 0 auto 30px auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    padding: 30px;
+    border: 1px solid #334155;
+}
+
+/* --- HEADER SECTION --- */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #334155;
+}
+
+.profile-frame {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    overflow: hidden;
+    border: 3px solid #38bdf8; /* Garis tepi biru neon modern */
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #f8fafc;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #38bdf8;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* --- MAIN CONTENT & SECTIONS --- */
+section {
+    margin-bottom: 25px;
+}
+
+section h3 {
+    font-size: 1.15rem;
+    color: #f1f5f9;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-left: 4px solid #38bdf8; /* Garis vertikal pemanis desain */
+    padding-left: 10px;
+}
+
+.about p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #94a3b8;
+}
+
+.about strong {
+    color: #38bdf8;
+}
+
+/* --- BIODATA GRID (DENGAN EFEK INTERAKTIF BARU) --- */
+.bio-grid {
+    background: #111827;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Memberi jarak konsisten antar item */
+}
+
+.bio-item {
+    color: #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border-left: 3px solid transparent; /* Garis sembunyi sebelum di-hover */
+    transition: all 0.3s ease; /* Transisi animasi mulus */
+}
+
+.bio-item strong {
+    color: #94a3b8;
+    display: inline-block;
+    width: 130px;
+    transition: color 0.3s ease;
+}
+
+/* Efek interaksi saat baris biodata ditunjuk */
+.bio-item:hover {
+    background: rgba(56, 189, 248, 0.08); /* Background berubah biru transparan */
+    border-left-color: #38bdf8; /* Garis kiri menyala biru */
+    transform: translateX(5px); /* Geser sedikit ke kanan */
+}
+
+.bio-item:hover strong {
+    color: #38bdf8; /* Teks label ikut menyala biru */
+}
+
+/* --- SKILLS TAGS (DENGAN EFEK TRANSISI) --- */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-tags span {
+    background: #334155;
+    color: #f1f5f9;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #475569;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.skills-tags span i {
+    color: #38bdf8;
+    transition: transform 0.3s ease;
+}
+
+/* Efek interaksi saat tag keahlian ditunjuk */
+.skills-tags span:hover {
+    background: #38bdf8; /* Berubah penuh menjadi biru neon */
+    color: #0f172a; /* Teks berganti gelap agar kontras */
+    border-color: #7dd3fc;
+    transform: translateY(-3px); /* Terangkat ke atas */
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4); /* Efek pendaran cahaya/glow */
+}
+
+.skills-tags span:hover i {
+    color: #0f172a;
+    transform: scale(1.2); /* Ikon membesar */
+}
+
+/* --- TIMELINE (EDUCATION) --- */
+.timeline {
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: #334155;
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.timeline li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #38bdf8;
+}
+
+.year {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #38bdf8;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.timeline p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+/* --- PROJECTS --- */
+.project-item {
+    background: #111827;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #10b981;
+}
+
+.project-item h4 {
+    color: #f1f5f9;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.project-item p {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+/* --- CONTACT BUTTONS --- */
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #0a0101;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.tiktok { background-color: #fcfafa; border: 1px solid #334155; }
+.whatsapp { background-color: #25d366; }
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+/* --- FOOTER & VISITOR COUNTER --- */
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.visitor-counter {
+    font-size: 0.85rem;
+    color: #f5f7f8;
+    background: #1c1f22;
+    padding: 6px 16px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #334155;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.visitor-counter i {
+    color: #38bdf8;
+}
+
+#count {
+    font-weight: 700;
+    color: #e8ecf0;
+}

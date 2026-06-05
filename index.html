@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya - WANDI M SIDIQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <header>
+            <div class="profile-frame">
+                <img src="c:\Users\Hype GLK\Downloads\WhatsApp Image 2026-06-02 at 12.58.11.jpeg" alt="Foto Profil Wandi">
+            </div>
+            <h1>WANDI M SIDIQ</h1>
+            <p class="subtitle"><i class="fa-solid fa-code"></i> Siswa & Web Developer Pemula</p>
+        </header>
+
+        <main>
+            <section class="about">
+                <p>Halo! Saya adalah seorang siswa SMK Jurusan Rekayasa Perangkat Lunak yang sedang aktif belajar <strong>HTML5</strong> dan <strong>CSS3</strong> untuk membangun website yang keren, modern, dan responsif. Saat ini fokus saya adalah mendalami dunia <em>Front-End Web Development</em>. Saya selalu penasaran dengan hal baru dan siap menghadapi tantangan di dunia digital!</p>
+            </section>
+
+            <section class="biodata">
+                <h3><i class="fa-solid fa-user"></i> Riwayat Hidup</h3>
+                <div class="bio-grid">
+                    <div class="bio-item"><strong>Nama Lengkap:</strong> WANDI MUHAMMAD SIDIQ</div>
+                    <div class="bio-item"><strong>TTL:</strong> Bandung Barat, 11 Oktober 2008</div>
+                    <div class="bio-item"><strong>Email:</strong> sidiqwndi79@gmail.com</div>
+                </div>
+            </section>
+
+            <section class="skills">
+                <h3><i class="fa-solid fa-star"></i> Keahlian</h3>
+                <div class="skills-tags">
+                    <span><i class="fa-brands fa-html5"></i> HTML5 (Dasar)</span>
+                    <span><i class="fa-brands fa-css3-alt"></i> CSS3 (Desain & Layout)</span>
+                    <span><i class="fa-solid fa-palette"></i> Desain UI/UX</span>
+                    <span><i class="fa-solid fa-mobile-screen"></i> Responsive Design</span>
+                </div>
+            </section>
+
+            <section class="education">
+                <h3><i class="fa-solid fa-graduation-cap"></i> Riwayat Pendidikan</h3>
+                <ul class="timeline">
+                    <li>
+                        <span class="year">2024 - Sekarang</span>
+                        <p><strong>SMK Negeri 1 Cipeundeuy</strong> - Kompetensi Keahlian Terkait Teknologi</p>
+                    </li>
+                    <li>
+                        <span class="year">2021 - 2024</span>
+                        <p><strong>SMP Negeri 1 Cipeundeuy</strong> - Lulus tahun 2024</p>
+                    </li>
+                    <li>
+                        <span class="year">2015 - 2021</span>
+                        <p><strong>SD Negeri Gunungleutik</strong> - Lulus tahun 2021</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="projects">
+                <h3><i class="fa-solid fa-laptop-code"></i> Proyek Saya</h3>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h4>Website Portofolio Pribadi</h4>
+                        <p>Mengembangkan halaman website profil interaktif menggunakan HTML5 dan CSS3 murni.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact">
+                <h3><i class="fa-solid fa-envelope"></i> Hubungi Saya</h3>
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@wandi_0370" target="_blank" class="btn tiktok">
+                        <i class="fa-brands fa-tiktok"></i> TikTok
+                    </a>
+                    <a href="https://wa.me/6283820544078" target="_blank" class="btn whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 WANDI M SIDIQ. Built with <i class="fa-solid fa-heart" style="color: #ff4d4d;"></i> in Jatinenggang.</p>
+        
+        <div class="visitor-counter">
+            <i class="fa-solid fa-eye"></i> Total Kunjungan: <span id="count">0</span>
+        </div>
+    </footer>
+
+    <script>
+        // Menggunakan LocalStorage agar hitungan bertambah setiap kali halaman dimuat ulang (refresh)
+        let totalVisits = localStorage.getItem('wandi_portfolio_visits');
+        
+        if (totalVisits) {
+            totalVisits = parseInt(totalVisits) + 1;
+        } else {
+            totalVisits = 1; // Jika kunjungan pertama kali
+        }
+        
+        localStorage.setItem('wandi_portfolio_visits', totalVisits);
+        
+        // Tampilkan angkanya ke dalam tag HTML dengan id="count"
+        document.getElementById('count').innerText = totalVisits;
+    </script>
+
+</body>
+</html>
